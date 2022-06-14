@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header {
+    font-family: Sansita swashed, sans-serif;
+    height: 80px;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.dropdown {
+    --primary:rgba(0, 0 ,0 , 0.7);
+    --secondary: #fc5c7d;
+    width: 100px;
+    position: relative;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 4px;
+    float: right;
+}
+.dropdown__select {
+    border-radius: inherit;
+    width: 100px;
+}
+.dropdown__list {
+    width: 200px;
+    margin-top: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+.dropdown__list:before {
+    content: "";
+    height: 2.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transform: translateY(-100%);
+}
+.dropdown:hover .dropdown__list {
+    display: block;
+}
+.dropdown__select,
+.dropdown__item {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.dropdown__item {
+    transition: background-color 0.2s linear;
+}
+.dropdown__item:first-child {
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+.dropdown__item:first-child:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 3rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--primary);
+    transform: translateY(-100%);
+    transition: border-color 0.2s linear;
+}
+.dropdown__item:first-child:hover:before {
+    border-bottom-color: var(--secondary);
+}
+.dropdown__item:last-child {
+    border-radius: 0 0 4px 4px;
+}
+.dropdown__item:hover {
+    background-color: var(--secondary);
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.header h1 {
+    background: -webkit-linear-gradient(#fc5c7d, #6a82fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.container{
+    max-width: 1080px;
+    margin: auto;
+    background-color:rgba(0, 0, 0, 0.1 );
+    margin-top: 80px;
+    padding-top: 30px;
+}
+.article img{
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+}
+.blank {
+    visibility: hidden;
+}
+h3, h4, p {
+    padding: 10px 20px;
+    text-align: justify;
+}
+.figure {
+    text-align: center;
+    padding: 0px 50px 20px 50px;
+}
+.footer{
+    font-family: Helvetica, Arial,  sans-serif;
+    height: 80px;
+    padding: 20px;
+    color: white;
+    background-color: black;
+}
